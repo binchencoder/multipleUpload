@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+xsi:schemaLocation="http://www.springframework.org/schema/data/mongo 
+    http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+    http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+			<bean id="mongo" class="com.mongodb.Mongo">
+			<constructor-arg>
+				<list>
+					<ref bean="mgt_sunAddress" />
+					<ref bean="mgt_earthAddress" />
+					<ref bean="mgt_moonAddress" />
+				</list>
+			</constructor-arg>
+		</bean>
+        
+        <bean id="mgt_sunAddress" class="com.mongodb.ServerAddress">
+                <constructor-arg value="${sun.host}" />
+                <constructor-arg value="${sun.port}" />
+        </bean>
+
+        <bean id="mgt_moonAddress" class="com.mongodb.ServerAddress">
+                <constructor-arg value="${moon.host}" />
+                <constructor-arg value="${moon.port}" />
+        </bean>
+        <bean id="mgt_earthAddress" class="com.mongodb.ServerAddress">
+                <constructor-arg value="${earth.host}" />
+                <constructor-arg value="${earth.port}" />
+        </bean>
+        <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+                <constructor-arg name="mongo" ref="mongo"/>
+                <constructor-arg name="databaseName" value="${mgt.db.name}"/>
+        </bean>
+        <!-- 开发时去掉下面的注释，打开配置 -->
+	<!-- <bean class="org.springframework.data.mongodb.core.mapping.event.LoggingEventListener"/> -->
+	<mongo:repositories base-package="com.jingoal.*.dao" mongo-template-ref="mongoTemplate" />
+</beans>

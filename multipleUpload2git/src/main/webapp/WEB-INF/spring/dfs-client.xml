@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- dfs.config.properties in mgt.config.xml-->
+     <bean id="dfs.client" class="com.jingoal.dfsclient.DFSClientDuplicateShardImpl">
+    	<constructor-arg ref="dfs.mongo"/>
+    	<constructor-arg value="${dfs.dbname}"/>
+    	<constructor-arg ref="dfs.client.diskStore"/>
+    </bean>
+    
+    <bean id="dfs.client.diskStore" class="com.jingoal.dfsclient.cache.QuotaLRUDiskCache">
+    	<constructor-arg value="${dfs.client.disk.max}"/>
+    	<constructor-arg value="${dfs.client.disk}"/>
+    </bean>
+    
+    <!-- 为mgt file server 服务的dfs配置 -->
+    <bean id="dfs.client.fileserver" class="com.jingoal.dfsclient.DFSClientDuplicateImpl">
+    	<constructor-arg ref="dfs.mongo.fileserver"/>
+    	<constructor-arg value="${dfs.dbname.fileserver}"/>
+    	<constructor-arg ref="dfs.client.diskStore.fileserver"/>
+    </bean>
+    
+    <bean id="dfs.client.diskStore.fileserver" class="com.jingoal.dfsclient.cache.QuotaLRUDiskCache">
+    	<constructor-arg value="${dfs.client.disk.max}"/>
+    	<constructor-arg value="${dfs.client.disk.fileserver}"/>
+    </bean>
+    
+</beans>

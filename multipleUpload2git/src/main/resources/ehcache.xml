@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd">
+	
+	<diskStore path="java.io.tmpdir" />
+	<cacheManagerPeerProviderFactory
+            class="net.sf.ehcache.distribution.jms.JMSCacheManagerPeerProviderFactory"
+            properties="initialContextFactoryName=net.sf.ehcache.distribution.jms.ExampleActiveMQInitialContextFactory;
+                providerURL=failover:(tcp://192.168.88.210:61616?wireFormat.tightEncodingEnabled=false,tcp://192.168.88.210:61617?wireFormat.tightEncodingEnabled=false);
+                replicationTopicConnectionFactoryBindingName=topicConnectionFactory;                
+                replicationTopicBindingName=jingoalDev"
+            propertySeparator=";"
+            />
+	<defaultCache maxElementsInMemory="2000000" eternal="false"
+		timeToIdleSeconds="3600"
+    	timeToLiveSeconds="3600"
+	  	overflowToDisk="false"
+		diskSpoolBufferSizeMB="30" 
+		maxElementsOnDisk="10000000"
+		diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+		<cacheEventListenerFactory
+	          class="net.sf.ehcache.distribution.jms.JMSCacheReplicatorFactory"
+	          properties="replicateAsynchronously=true,
+	                       replicatePuts=false,
+	                       replicateUpdates=false,
+	                       replicateUpdatesViaCopy=false,
+	                       replicateRemovals=true,
+	                       asynchronousReplicationIntervalMillis=1000"
+	           propertySeparator=","/>
+       </defaultCache>
+
+</ehcache>

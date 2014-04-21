@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+	">
+	<bean id="dfs.mongo" class="com.mongodb.Mongo">
+		<constructor-arg>
+			<list>
+				<ref bean="sunAddress" />
+				<!-- 
+				<ref bean="moonAddress" />
+				<ref bean="earthAddress" />
+				 -->
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="sunAddress" class="com.mongodb.ServerAddress">
+		<constructor-arg value="${dfs.sun.host}" />
+		<constructor-arg value="${dfs.sun.port}" />
+	</bean>
+	
+	<bean id="moonAddress" class="com.mongodb.ServerAddress">
+		<constructor-arg value="${dfs.moon.host}" />
+		<constructor-arg value="${dfs.moon.port}" />
+	</bean>
+	<bean id="earthAddress" class="com.mongodb.ServerAddress">
+		<constructor-arg value="${dfs.earth.host}" />
+		<constructor-arg value="${dfs.earth.port}" />
+	</bean>
+	
+	
+	<!-- 为mgt file server 服务的dfs配置 -->
+	<bean id="dfs.mongo.fileserver" class="com.mongodb.Mongo">
+		<constructor-arg>
+			<list>
+				<ref bean="sunAddress.fileserver" />
+				<!-- 
+				<ref bean="moonAddress.fileserver" />
+				<ref bean="earthAddress.fileserver" />
+				 -->
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="sunAddress.fileserver" class="com.mongodb.ServerAddress">
+		<constructor-arg value="${dfs.sun.host.fileserver}" />
+		<constructor-arg value="${dfs.sun.port.fileserver}" />
+	</bean>
+	
+	<bean id="moonAddress.fileserver" class="com.mongodb.ServerAddress">
+		<constructor-arg value="${dfs.moon.host.fileserver}" />
+		<constructor-arg value="${dfs.moon.port.fileserver}" />
+	</bean>
+	<bean id="earthAddress.fileserver" class="com.mongodb.ServerAddress">
+		<constructor-arg value="${dfs.earth.host.fileserver}" />
+		<constructor-arg value="${dfs.earth.port.fileserver}" />
+	</bean>
+
+</beans>

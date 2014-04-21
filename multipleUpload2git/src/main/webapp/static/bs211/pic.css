@@ -1,0 +1,244 @@
+.btn-large [class^="mpic-"],
+.btn-large [class*=" mpic-"] {
+  margin-top: 2px;
+}
+.btn-small [class^="mpic-"],
+.btn-small [class*=" mpic-"] {
+  margin-top: 0;
+}
+[class^="mpic-"],
+[class*=" mpic-"] {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: middle;
+  background-image: url("img/mgt.gif?v=12");
+  background-repeat: no-repeat;
+  margin-top:1px;
+}
+.mpic-selectUser {
+  background-position: 0px 0;width:25px;height: 25px;
+}
+.mpic-edit {
+  background-position: -28px    0;
+  width: 20px;
+  height: 20px;
+  margin:-2px 5px 0 0;
+}
+.mpic-mylog {
+  background-position: -54px    0;
+  width: 20px;
+  height: 20px;
+  margin:-2px 5px 0 0;
+}
+.mpic-mycomment {
+  background-position: -79px    0;
+  width: 20px;
+  height: 20px;
+  margin:-2px 5px 0 0;
+}
+.mpic-logsuper {
+  background-position: -105px    0;
+  width: 20px;
+  height: 20px;
+  margin:-2px 5px 0 0;
+}
+.mpic-ok {
+  background-position: -131px   -1px;
+  width:19px;
+  height:16px;
+}
+.mpic-deny {
+  background-position: -156px   -1px;
+  width:16px;
+  height:16px;
+}
+.mpic-pen {
+  background-position: -181px    0;
+}
+.mpic-comment1 {
+  background-position: -208px    0;
+}
+.mpic-tool {
+  background-position: -234px    0;
+}
+.mpic-supplement {
+  background-position: -260px    0;
+}
+.mpic-dayplan {
+  background-position: -511px    0;
+  width: 20px;
+  height: 20px;
+  margin:-2px 5px 0 0;
+}
+.mpic-arrow {
+  background-position: -373px  -5px;width: 12px;  height: 11px;  
+}
+.mpic-search {
+  background-position: -387px  -5px;width: 13px;  height: 13px;  
+}
+.mpic-moreLog{
+  background-position: -340px  -24px;width: 40px;  height: 17px;
+}
+.mpic-alligoal{
+	background-position: -408px  -25px;width:20px;  height:20px;margin:-2px 5px 0 0;
+}
+.mpic-recycle{
+	background-position: -479px  -25px;width:20px;  height:20px;margin:-2px 5px 0 0;
+}
+.mpic-setting{
+	background-position: -349px  0;width:20px;  height:20px;margin:-2px 5px 0 0;
+}
+.mpic-set{
+	background-position: -3px  -84px;width:20px;  height:20px;margin:-2px 5px 0 0;
+}
+.mpic-customer{
+	background-position: -384px  -25px;width:20px;  height:20px;
+}
+.mpic-myclient{
+	background-position: -432px  -25px;width:20px;  height:20px;margin:-2px 5px 0 0;
+}
+.mpic-confirm {
+  background-position: -404px  -2px;width: 16px;  height: 16px;
+}
+.mpic-mgtwarn{
+  background-position: -429px  0;width: 27px;  height: 25px;
+}
+.mpic-ok1 {
+  background-position: 0  -26px;width: 16px;  height: 16px;  
+}
+.mpic-ok2 {
+  background-position: -21px -26px;width: 16px;  height: 16px;  
+}
+.mpic-go1 {
+  background-position: -42px -26px;width: 16px;  height: 16px;  
+}
+.mpic-go2 {
+  background-position: -64px -26px;width: 16px;  height: 16px;  
+}
+.mpic-delete1 {
+  background-position: -85px -26px;width: 16px;  height: 16px;  
+}
+.mpic-att {
+  background-position: -107px -26px;width: 16px;  height: 13px;  vertical-align:-2px;
+}
+.mpic-delete2 {
+  background-position: -128px -26px;width: 10px;  height: 10px;  vertical-align:0px;
+}
+.mpic-comment2 {
+  background-position: -144px -26px;width: 16px;  height: 15px;  vertical-align:-2px;
+}
+.mpic-notify-success{ background-position:-306px 0; margin-right:3px;vertical-align:-4px;}
+.mpic-notify-error{ background-position:-327px 0; margin-right:3px;vertical-align:-4px;}
+.mpic-back {
+  background-position: -188px -26px;width: 16px;  height: 19px; padding-right: 2px;
+}
+.mpic-forward {
+  background-position: -209px -26px;width: 16px;  height: 19px; padding-left: 2px;
+}
+.mpic-gz1 {  background-position: -233px -24px;height: 16px; }
+.mpic-gz0 {  background-position: -256px -24px;height: 16px; }
+.mpic-gz2 {  background-position: -278px -24px;height: 16px; }
+.mpic-upfold{
+  background-position:-451px -61px;width:43px; height:7px;
+}
+
+.mpic-fold{
+  background-position:-451px -48px;width:43px; height:7px;
+}
+
+.mpic-add { background-position:-456px -25px; width:20px; height:20px;margin:-2px 5px 0 0 !important;}
+.mpic-fix {
+    background-position: -233px -2px;
+}
+.mpic-forward-un{
+	 background-position: -496px -47px;width: 16px;  height: 19px; padding-right: 2px;
+}
+.mpic-back-un{
+	 background-position: -512px -47px;width: 16px;  height: 19px; padding-right: 2px;
+}
+.mpic-tally{
+  background-position:-504px -25px;width:20px; height:20px;
+}
+.mpic-memo{
+	background-position:-536px -16px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-email{
+	background-position:-536px -32px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-doc{
+	background-position:-536px -48px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-talk{
+	background-position:-536px -64px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-log{
+	background-position:-536px -80px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-plan{
+	background-position:-536px -96px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-approve{
+	background-position:-572px 0px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-notice{
+	background-position:-572px -16px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-bbs{
+	background-position:-572px -32px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-knowledge{
+	background-position:-572px -64px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-task{
+	background-position:-536px -111px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-project{
+	background-position:-572px -113px;margin-top:1px;width:18px; height:16px;
+}
+.mpic-iglog{
+  background-position: -24px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igknow{
+  background-position: -61px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igbbs{
+  background-position: -98px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igapprove{
+  background-position: -135px -84px;width: 36px;  height: 36px;  
+}
+.mpic-ignotice{
+  background-position: -172px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igcomm{
+  background-position: -209px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igplan{
+  background-position: -246px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igemail{
+  background-position: -283px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igdocu{
+  background-position: -320px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igmemo{
+  background-position: -357px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igtask{
+  background-position: -397px -84px;width: 36px;  height: 36px;  
+}
+.mpic-igitem{
+  background-position: -435px -84px;width: 36px;  height: 36px;  
+}
+.mpic-newadd{
+	background-position: -472px -88px;width:13px;height:14px;margin-right:10px; vertical-align: -2px;*vertical-align:1px;
+}
+
+.nav-list [class^="mpic-"],
+.nav-list [class*=" mpic-"] {
+  margin-right: 2px;
+}

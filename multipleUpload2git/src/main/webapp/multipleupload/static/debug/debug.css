@@ -1,0 +1,107 @@
+/* debug  */
+.windowContainter {
+    height:400px;
+    width:400px;
+    border:1px solid #14495f;
+    position:absolute;
+    font-size:13px;
+    background: #F2F9FF;
+}
+.windowTitle {
+    height:26px;
+    width:auto;
+    background-color: #0B88BA;
+    cursor: move;
+}
+.windowTitleInfo {
+    float:left;
+    height:20px;
+    margin-top:2px;
+    margin-left:10px;
+    line-height:20px;
+    vertical-align:middle;
+    color:#FFFFFF;
+    font-weight:bold;
+}
+.windowClose {
+    float:right;
+    height:20px;
+    width:21px;
+    margin-top:2px;
+    margin-right:5px;
+    text-align:center;
+    line-height:20px;
+    vertical-align:middle;
+    cursor: pointer;
+}
+.windowToolBar {
+    height:26px;
+    width:auto;
+    background-color: #C7DBF4;
+}
+.windowBody {
+    padding:10px;
+    width:auto;
+    overflow-y: auto;
+}
+.windowBottom {
+    bottom:1px dashed red;
+    right:1px;
+    cursor:nw-resize;
+    position:absolute;
+    width:10px;
+    height:10px;
+    font-size:0;
+}
+.clear {
+	float:right;
+    height:20px;
+    width:50px;
+    cursor: pointer;
+}
+.windowMin {
+    float:right;
+    height:20px;
+    width:21px;
+    margin-top:2px;
+    margin-right:5px;
+    text-align:center;
+    line-height:20px;
+    vertical-align:middle;
+    display: none;
+    cursor: pointer;
+}
+.windowMax {
+    float:right;
+    height:20px;
+    width:21px;
+    margin-top:2px;
+    margin-right:5px;
+    text-align:center;
+    line-height:20px;
+    vertical-align:middle;
+    cursor: pointer;
+}
+.windowMini {
+	float:right;
+    height:20px;
+    width:21px;
+    margin-top:2px;
+    margin-right:5px;
+    text-align:center;
+    line-height:20px;
+    vertical-align:middle;
+    cursor: pointer;
+}
+.windowExpand {
+	float:right;
+    height:20px;
+    width:21px;
+    margin-top:2px;
+    margin-right:5px;
+    text-align:center;
+    line-height:20px;
+    vertical-align:middle;
+    display: none;
+    cursor: pointer;
+}
