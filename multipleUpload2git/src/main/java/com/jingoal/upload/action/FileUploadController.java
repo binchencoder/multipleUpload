@@ -81,6 +81,14 @@ public class FileUploadController {
 			if (!tempFile.exists()) {
 				file.transferTo(tempFile);
 				
+				//不需要续传的文件(一次上传成功)
+				if(file.getSize() == fileSize){
+					retData.put("localPath", fileId + "_" + currUid);
+					// 当前tomcat服务器所在ip
+					InetAddress addr = InetAddress.getLocalHost();
+					String ipStr = addr.getHostAddress().toString();
+					retData.put("server", IPConvert.ipToLong(ipStr));
+				}
 				retData.put("postedSize", tempFile.length());
 			} else {
 				RandomAccessFile raf = new RandomAccessFile(tempFile, "rw");
